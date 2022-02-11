@@ -1,0 +1,8 @@
+name: SpecterBosses
+main: com.lucas.specterbosses.Main
+version: 1.0
+authors: [Specter]
+commands:
+  boss:
+  giveboss:
+  givebosskiller:

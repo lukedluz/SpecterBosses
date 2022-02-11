@@ -1,0 +1,109 @@
+# Voc§ dever§ configurar de acordo com o seu mobstack, exemplo: se o seu mobstack stacka todos os mobs em uma distancia de 10 blocos, o indicado
+# § que coloque pelo menos 10 ou 5 a mais no distance, ou seja, 15 ou 20
+Distance: 20
+
+ActionBar: '&eVida do %boss_name% &f- &7%boss_life%HP'
+
+CooldownAtivado: true
+Cooldown: 120
+
+Messages:
+  BossMobNear: '&cVoc§ precisa estar em uma dist§ncia grande para evitar problema com o mobstack'
+  BossNoPermission: '&cVoc§ n§o possui permiss§o para isso!'
+  BossReloadCommand: '&cUtilize /boss reload.'
+  BossReloaded: '&eConfigura§§o do plugin de bosses foi recarregada!'
+  BossGiveCommand: '&cUtilize /giveboss <player> <boss> <quantidade>.'
+  BossKillerCommand: '&cUtilize /givebosskiller <player> <id>.'
+  BossGave: '&aVoc§ givou &7@boss_amount &aboss(s) &7@boss &apara o jogador &7@player&a.'
+  BossKillerGave: '&aVoc§ givou uma &7@bosskiller_name &apara o jogador &7@player&a.'
+  BossDoesntExists: '&cInfelizmente esse boss n§o existe!'
+  OnlyUsingKiller: '&cInfelizmente vc precisa de uma matadora para fazer isso!'
+  Wait: '&cEspera para spawnar um boss novamente!'
+
+#
+# Explica§§o:
+# 
+# KillerItems:
+#   id: (Voc§ precis§ disso para executar o comando /givebosskiller <player> <id>)
+#     ID: idDoItem
+#     Data: dataDoItem
+#     Name: 'nome do item'
+#     Lore:
+#     - 'lore do item'
+#     Life: Vida que a o item ir§ tirar
+#     Glow: item com glow ou sem (true ou false)
+#     Unbreakable: item inquebr§vel ou n§o (true ou false)
+#     Durability: durabilidade do item (s§ funcionar§ se o unbreakable estiver false)
+#
+# OBS: Abaixo foi feito um exemplo para ter uma no§§o maior
+#
+KillerItems:
+  1:
+    ID: 276
+    Data: 0
+    Name: '&8&lCEIFADOR &7Nv.1'
+    Lore:
+    - ''
+    Life: 10
+    Glow: true
+    Durability: true
+  2:
+    ID: 276
+    Data: 0
+    Name: '&8&lCEIFADOR &7Nv.2'
+    Lore:
+    - ''
+    Life: 100
+    Glow: true
+    Durability: true
+    
+#
+# IMPORTANTE: Voc§ precisa obrigatoriamente, modificar as seguintes "§reas": 
+# - Boss_Dark
+# - Mob_Custom_Name 
+# - nome do item que ir§ spawnar os boss (Icon - Name)
+#
+# OBS: Abaixo foi feito um exemplo para ter uma no§§o maior
+#
+Bosses:
+  1:
+    Boss_Name: 'DARK'
+    Boss:
+      Mob_Type: ZOMBIE
+      Mob_Custom_Name: '&8&lDARK'
+      Mob_Life: 2000
+      Mob_Hit: 0
+      Side_Effects: {}
+    Icon:
+      ID: 383
+      Data: 59
+      Name: '&8&lBOSS DARK'
+      Lore: 
+      - '&7Ao matar este boss, voc§ receber§'
+      - '&7itens especiais'
+      - ''
+      - '&fRaridade: &7N§vel V'
+    Commands:
+    - 'itemreward @player 1 1;10'
+    Rewards:
+      1:
+        ID: 138
+        Data: 0
+        Name: '&b&lBEACON DOS DEUSES'
+        Lore:
+        - ''
+        Amount: 64
+        Enchantments:
+        - '3:1'
+        Chance: 100
+      2:
+        ID: 395
+        Data: 0
+        Name: '&f&lPAPEL DE &6&lCASH'
+        Lore:
+        - '&7Clique com o direito e ganha 1000 cash(s)'
+        - ''
+        Amount: 64
+        Enchantments:
+        - '3:1'
+        Chance: 10
