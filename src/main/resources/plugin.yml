@@ -1,8 +1,7 @@
-name: SpecterBosses
-main: com.lucas.specterbosses.Main
+name: BossArena
 version: 1.0
-authors: [Specter]
+authors: [THG]
+main: com.tke.boss.BossArena
 commands:
-  boss:
+  setitems:
   giveboss:
-  givebosskiller:

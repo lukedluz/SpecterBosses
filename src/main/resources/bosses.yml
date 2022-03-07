@@ -1,0 +1,11 @@
+Bosses:
+  Teste:
+    name: 'Teste'
+    displayName: '&cTeste'
+    texture: 'ZOMBIE'
+    health: 50
+    damage: 2.0
+    message:
+      - '&cVocê me spawnou, prepare-se!'
+    commands:
+      - ''
